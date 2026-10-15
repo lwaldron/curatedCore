@@ -16,7 +16,6 @@ permissions:
   actions: read
 jobs:
   claude:
-    # TODO: switch to @devel once waldronlab/.github#6 is merged
-    uses: waldronlab/.github/.github/workflows/claude.yml@claude-federation-rule-input
+    uses: waldronlab/.github/.github/workflows/claude.yml@devel
     with:
       federation_rule_id: fdrl_014i6mVkMJG7N84HBzdnr9ch
