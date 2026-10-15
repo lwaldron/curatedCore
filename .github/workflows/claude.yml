@@ -1,0 +1,22 @@
+name: claude
+on:
+  issue_comment:
+    types: [created]
+  pull_request_review_comment:
+    types: [created]
+  pull_request_review:
+    types: [submitted]
+  issues:
+    types: [opened, labeled]
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  id-token: write
+  actions: read
+jobs:
+  claude:
+    # TODO: switch to @devel once waldronlab/.github#6 is merged
+    uses: waldronlab/.github/.github/workflows/claude.yml@claude-federation-rule-input
+    with:
+      federation_rule_id: fdrl_014i6mVkMJG7N84HBzdnr9ch
